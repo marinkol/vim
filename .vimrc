@@ -11,12 +11,37 @@
 "runtime! debian.vim
 
 set nocompatible	" Use Vim defaults instead of 100% vi compatibility
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'majutsushi/tagbar'
+Bundle 'altercation/vim-colors-solarized'
+
+" Github repos of the user 'vim-scripts'
+" => can omit the username part
+"Bundle 'L9'
+"Bundle 'FuzzyFinder'
+
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+" ...
+
+filetype plugin indent on     " required!
 
 """"""""""""""""""
 " Begin debian.vim
 """"""""""""""""""
 
-set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+"set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 
 
 
